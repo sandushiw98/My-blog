@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<h1 style="text-align:center">Olympic Games</h1>
+<style>
+
+h1{
+  
+   font-size: 40px;
+   color: #23245a ;
+   font-family: sans-serif;
+   font-weight: bolder;
+   font-style:italic ;
+   text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+   font-size: 30px;
+   font-family: sans-serif;
+   font-weight: bolder;
+   font-style:italic ;
+   text-align: center;
+
+}
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color:#67675f;
+  border: #23245a;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.carousel{
+  position: relative;
+}
+
+.images{
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.back,.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.about {
+  text-align: center;
+  background-color: #764646;
+  padding: 2px 16px;
+  color: rgb(32, 28, 27);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 20%;
+}
+
+.tinyimg{
+  opacity: 0.6;
+}
+
+.tinyimg:hover {
+  opacity: 1;
+}
+
+.form1{
+background-color: #ac3636;
+border: #f2f2f2;
+
+}
+
+#runner {
+  position: relative;
+  top: 45px;
+  left: 30px;
+  border: 1px ;
+  height: 250px;
+
+}
+
+.music-center{
+  position: absolute;
+  top: 1110px;
+  left: 30px;
+  border: 1px ;
+  z-index: -1;
+  height: 220px;
+
+}
+
+.video{
+  float: right;
+  height: 250px;
+  width: 500px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
+
+tr{
+  text-align: left;
+
+}
+table{
+      margin-left: auto;
+      margin-right: auto;
+}
+
+th{
+  font-size: 20px;
+}
+
+td{
+  font-size: 20px;
+}
+
+button{
+        padding: 3px 6px;
+        top: 200px;
+        right: 210px;
+        position: relative;
+}
+button img{
+        vertical-align: middle;
+}
+
+
+</style>
+
+<body>
+
+<div class="carousel">
+  <div class="images">
+    <div class="numbertext">1/5</div>
+    <img src="Cot3qf5wjyvmaVdq" style="width:100%" height="500">
+  </div>
+
+  <div class="images">
+    <div class="numbertext">2/5</div>
+    <img src="Olympic2.webp" style="width:100%" height="500">
+  </div>
+
+  <div class="images">
+    <div class="numbertext">3/5</div>
+    <img src="Olympic3.webp" style="width:100%" height="500">
+  </div>
+    
+  <div class="images">
+    <div class="numbertext">4/5</div>
+    <img src="olympic4webp.webp" style="width:100%" height="500">
+  </div>
+
+  <div class="images">
+    <div class="numbertext">5/5</div>
+    <img src="olympic1.jpg" style="width:100%" height="500">
+  </div>
+    
+     
+  <a class="back" onclick="nextImage(-1)">❮</a>
+  <a class="next" onclick="nextImage(1)">❯</a>
+
+  <div class="about">
+    <p id="aboutinst"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="tinyimg" src="Cot3qf5wjyvmaVdq" style="width:100%" height="250" onclick="currentImage(1)" alt="Enthusiasm">
+    </div>
+    <div class="column">
+      <img class="tinyimg" src="Olympic2.webp" style="width:100%" height="250" onclick="currentImage(2)" alt="Colaborativeness">
+    </div>
+    <div class="column">
+      <img class="tinyimg" src="Olympic3.webp" style="width:100%" height="250" onclick="currentImage(3)" alt="Hopes">
+    </div>
+    <div class="column">
+      <img class="tinyimg" src="olympic4webp.webp" style="width:100%" height="250"  onclick="currentImage(4)" alt="Achievements">
+    </div>
+    <div class="column">
+      <img class="tinyimg" src="olympic1.jpg" style="width:100%" height="250" onclick="currentImage(5)" alt="Spirit">
+    </div>    
+
+  </div>
+</div>
+
+
+
+<img id="runner" src="runner-removebg-preview.png">
+
+
+
+</div><br><br>
+
+<div class="video">
+  <video width="600" height="300" controls>
+  <source src="WhatsApp Video 2022-08-18 at 12.32.30 PM.mp4" type="video/mp4">
+</video>
+</div><br>
+
+<table width="30%" border = "0px" >
+<td> <p>
+  <button type="button" onclick="increase()">+ Increase</button>
+  <button type="button" onclick="decrease()">- Decrease</button>
+    </p>
+
+<img src="zoom.jpg" id="myImg" width="300px" alt="Map"></td>
+</table>
+
+<div class="form1">
+  <form >
+      
+      <h2 >Contact Us</h2>
+      <table>
+          <tr>
+              <td><label>Name:</label></td>
+              <td><input type="text" placeholder="Enter your name" id="name"><br><br></td>
+          </tr>
+          <tr>
+              <td><label>Telephone Number:</label></td>
+              <td><input type="text" placeholder="Enter your phone number" id="tel"><br><br></td>
+          </tr>
+          <tr>
+              <td> <label>Email:</label></td>
+              <td><input type="text" placeholder="Enter your e-mail" id="email"></td>
+          </tr>
+          <tr>
+              <td><input type="submit" value="submit" onclick="validate()"></td>
+              <td><input type="submit" value="cancel" onclick="clearfunc()"></td>
+              
+              
+          </tr>
+          
+      </table>
+      
+  </form>
+</div> 
+
+
+
+<script>
+
+ let imgNum = 1;
+ viewImage(imgNum);
+
+function nextImage(n) {
+  viewImage(imgNum += n);
+}
+
+function currentImage(n) {
+  viewImage(imgNum = n);
+}
+
+function viewImage(n) {
+
+  let i;
+
+  let image = document.getElementsByClassName("images");
+  let preview = document.getElementsByClassName("tinyimg");
+  let about = document.getElementById("aboutinst");
+
+  if (n > image.length) {
+    imgNum = 1
+  }
+
+  if (n < 1) {
+    imgNum = image.length
+  }
+
+  for (i = 0; i < image.length; i++) {
+    image[i].style.display = "none";
+  }
+
+  for (i = 0; i < preview.length; i++) {
+    preview[i].className = preview[i].className.replace(" active", "");
+  }
+
+  image[imgNum-1].style.display = "block";
+  preview[imgNum-1].className += " active";
+  about.innerHTML = preview[imgNum-1].alt;
+}
+
+    runner.onclick = function(){
+        let start = Date.now();
+        let timer = setInterval(function(){
+            let timePassed = Date.now() - start;
+            runner.style.left = timePassed/3+ 'px';
+            if(timePassed > 5000){
+                clearInterval(timer);
+            }
+        },20);
+    }
+
+    function increase() {
+        var myImg = document.getElementById("myImg");
+        var width = myImg.clientWidth;
+        if (width == 600) {
+            alert("You have reached the maximum zoom level.");
+        } else {
+            myImg.style.width = (width + 20) + "px";
+        }
+}
+    function decrease() {
+        var myImg = document.getElementById("myImg");
+        var width = myImg.clientWidth;
+        if (width == 40) {
+            alert("You have reached the minimum zoom level.");
+        } else {
+            myImg.style.width = (width - 20) + "px";
+        }
+}
+
+
+function validate(){
+        var uname = document.getElementById("name").value;
+        var tel = document.getElementById("tel").value;
+        var email = document.getElementById("email").value;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if(uname==null || uname==""){
+            alert("Name can't be blank!");
+        }else if(tel.length != 10){
+            alert("Invalied Telephone number!");
+        }else if(inputText.value.match(mailformat)){
+            alert("Invalied e mail!");
+       }else{
+             alert("Welcome to the olympic world!!");
+       }
+    }
+
+    
+
+
+    function clearfunc(){
+        document.getElementById("name").value="";
+        document.getElementById("pwd").value="";
+        document.getElementById("tel").value="";
+    }
+</script>
+
+ </body>
+</html>
